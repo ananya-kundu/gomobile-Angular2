@@ -1,0 +1,97 @@
+
+<div class="col-md-6 col-md-offset-3" style="margin-top:60px;box-shadow: 0px 1px 2px 2px grey;    background-color: #eee">
+    <h2>Signup</h2>
+
+    <!-- <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate> -->
+    <form [formGroup]="signupForm" name="form" (ngSubmit)="onSubmit()">
+
+      <!-- <form name="form" (ngSubmit)="formSignup()"> -->
+        <div>
+          <label for="username">Username</label>
+          <input type="text" class="form-control" #usernameRef  name="usernameRef" formControlName="username"  placeholder="User Name" required />
+          <div *ngIf="signupForm.controls['username'].hasError('required')" class="alert alert-danger">
+            enter a user name
+          </div>
+        </div>
+
+
+
+        <div style="margin-top:10px">
+          <label for="mobileNo">Mobile No</label>
+          <input type="number" class="form-control" #mobilenoRef  name="mobilenoRef" placeholder="Mobile no" formControlName="mobileno"  required />
+          <div *ngIf="signupForm.controls['mobileno'].hasError('required')" class="alert alert-danger">
+            enter a mobile number
+          </div>
+
+        </div>
+
+
+        <div style="margin-top:10px">
+          <label for="email">Email Id</label>
+          <input type="email" class="form-control" #emailRef  name="email" placeholder="Email" formControlName="email"  required />
+            <div *ngIf="signupForm.controls['email'].hasError('required')" class="alert alert-danger">
+              enter a email id
+            </div>
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" #passwordRef formControlName="password" placeholder="Password" required />
+          <div *ngIf="signupForm.controls['password'].hasError('required')" class="alert alert-danger">password is required</div>
+        </div>
+
+        <div class="form-group" style="margin-top:10px">
+          <button [disabled]="!signupForm.valid" class="btn btn-primary">Signup</button>
+
+          <a [routerLink]="['/login']" class="btn btn-link">Already Logged in?</a>
+        </div>
+      </form>
+</div>
+
+
+
+
+<!--
+        <div style="margin-top:10px">
+          <label for="password">Password</label>
+          <input type="password" class="form-control"  #passwordRef="ngModel" minlength="4" name="password" placeholder="Password"  [(ngModel)]="data.password" required />
+
+            <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched )" class="alert alert-danger">
+              <div [hidden] = "!passwordRef.errors.required">
+                  Please enter a password
+              </div>
+              <div [hidden] = "!passwordRef.errors.minlegth">
+                  Please enter atleast 4 characters
+              </div>
+            </div>
+        </div> -->
+<!--
+
+<form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required />
+            <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
+            <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Register</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div> -->

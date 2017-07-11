@@ -1,0 +1,25 @@
+<app-navigationbar></app-navigationbar>
+<div class ="row">
+      <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2"  >
+              <app-sidebar (clicked)="onClicked($event)"></app-sidebar>
+      </div>
+
+    <div class= "col-xs-9 col-sm-9 col-md-9 col-lg-9"  style="">
+
+          <div class= "col-xs-12 col-sm-6 col-md-4 col-lg-4"  style="boder:3px solid red;" *ngFor = "let data of data" >
+                  <!-- <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;"><div>{{data.name}}</div>
+          </div>
+      </div> -->
+
+
+      <div class="container">
+  <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;" class="image"><div style="margin-left:30px;">{{data.name}}</div>
+  <div class="middle">
+    <div class="text" style="color:grey;">{{data.name}} {{data.price}} {{data.rating}}</div>
+  </div>
+</div>
+  </div>
+
+
+    <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2" >  </div>
+</div>
