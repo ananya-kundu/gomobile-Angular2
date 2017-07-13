@@ -1,25 +1,38 @@
 <app-navigationbar></app-navigationbar>
-<div class ="row">
-      <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2"  >
-              <app-sidebar (clicked)="onClicked($event)"></app-sidebar>
-      </div>
+<div class="row" style="margin-top:35px;">
+  <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2">
+    <app-sidebar (clicked)="onClicked($event)"></app-sidebar>
+  </div>
 
-    <div class= "col-xs-9 col-sm-9 col-md-9 col-lg-9"  style="">
+  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" >
 
-          <div class= "col-xs-12 col-sm-6 col-md-4 col-lg-4"  style="boder:3px solid red;" *ngFor = "let data of data" >
-                  <!-- <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;"><div>{{data.name}}</div>
-          </div>
-      </div> -->
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let data of data | pipes : keyValue  ">
 
-
+|
       <div class="container">
-  <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;" class="image"><div style="margin-left:30px;">{{data.name}}</div>
-  <div class="middle">
-    <div class="text" style="color:grey;">{{data.name}} {{data.price}} {{data.rating}}</div>
-  </div>
-</div>
+        <img src="{{data.image.small}}" class="image">
+        <div style="margin-left:30px;">{{data.name }}</div>
+        <div class="middle">
+          <div class="text" style="color:grey;">{{data.name}} {{data.price}} {{data.rating}}</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2"> </div>
   </div>
 
 
-    <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2" >  </div>
+
+  <!-- <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;"><div>{{data.name}}</div>
 </div>
+</div> -->
+  <!-- <table>
+     <tr *ngFor="let spec of prod.specs | keys">
+       <td><b>{{ spec.key }}</b></td>
+       <td *ngIf="spec.key=='camera'">{{spec.value}}{{camera}}</td>
+       <td *ngIf="spec.key=='storage'">{{spec.value}}{{storage}}</td>
+       <td *ngIf="spec.key != 'storage'"><span *ngIf="spec.key != 'camera'">{{ spec.value }}</span></td>
+     </tr>
+   </table>
+ -->

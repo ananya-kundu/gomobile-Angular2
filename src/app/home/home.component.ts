@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes ,Router} from '@angular/router';
+import { PipesPipe } from '../pipes.pipe';
 
 // import { AppService } from '../app.service';
 
@@ -12,6 +13,7 @@ import { RouterModule, Routes ,Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   data;
+  keyValue : any;
   constructor() {
 
   }
@@ -21,6 +23,7 @@ export class HomeComponent implements OnInit {
     console.log(this.data);
   }
   onClicked(value){
+    this.keyValue = value;
     console.log("change value",value);
   }
 //   logout():void{

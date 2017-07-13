@@ -2,13 +2,13 @@
   sidebar works!
 </p> -->
 
-<div class="sidebar col-sm-3 col-xs-3 ">
+<div class="sidebar col-sm-3 col-xs-3 " style="margin-top:35px;">
   <div class="sidebar-menu sidebarcss">
 
     <div *ngFor="let onefeature of feature" style="margin-top:35px;">
       <h4>{{onefeature.head}}</h4>
       <div *ngFor="let fea of onefeature.name" style="margin-top:5px;">
-       <input type="checkbox" (change)="changeValue()" name="onefeature.name" value="content"/>   {{fea}}
+       <input type="checkbox" (change)="changeValue(onefeature.head,fea)" name="onefeature.name" value="content"/>   {{fea}}
 
      </div>
     </div>

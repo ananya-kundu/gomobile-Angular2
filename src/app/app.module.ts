@@ -6,16 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppService } from './app.service';
 
-// import {MdCardModule} from ‘@angular2-material/card’;
-// import {MdButtonModule} from ‘@angular2-material/button’;
-// import {MdIconModule} from ‘@angular2-material/icon’;
-// import {MdIconRegistry} from ‘@angular2-material/icon’;
-
-//import {FlexLayoutModule,MaterialModule} from "@angular/flex-layout";
-// import { FlexLayout } from '@angular/flex-layout';
 import 'hammerjs';
-import { MaterialModule } from "@angular/material";
-
+// import { MaterialModule } from "@angular/material";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -23,6 +15,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { PipesPipe } from './pipes.pipe';
 
 
 const appRoutes : Routes = [
@@ -42,6 +35,7 @@ const appRoutes : Routes = [
     HomeComponent,
     NavigationbarComponent,
     SidebarComponent,
+    PipesPipe,
 
   ],
   imports: [
@@ -50,8 +44,7 @@ const appRoutes : Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes, {useHash: true}),
-    // MaterialModule.forRoot()
-    // FlexLayout.forRoot()
+
 
   ],
   providers: [AppService],

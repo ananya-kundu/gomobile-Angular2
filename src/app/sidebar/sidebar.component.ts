@@ -19,11 +19,15 @@ constructor(private appService: AppService) {
 
   ngOnInit() {
   }
-  clearAll(){
-      this.clicked.emit("welcome to EventEmitter");
-}
-changeValue(){
-    this.clicked.emit("welcome to EventEmitter");
+//   clearAll(){
+//       this.clicked.emit("welcome to EventEmitter");
+// }
+changeValue(title,fea){
+  let objFilter:any = {
+      title : title,
+      fea:fea
+  };
+    this.clicked.emit(objFilter);
 }
 }
 

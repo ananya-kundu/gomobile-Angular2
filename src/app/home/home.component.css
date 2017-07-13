@@ -1,14 +1,24 @@
+
+
+.middle[_ngcontent-c1] {
+      margin-left: 50px;
+}
 .container {
     position: relative;
-    /*width: 50%;*/
+    width: 50%;
 }
 
+
 .image {
+  padding: 10px;
   opacity: 1;
   display: block;
-  width: 100%;
-  height: auto;
+  width: 230px;
+  height:300px;
+  /*height: auto;*/
+  margin-top:20px;
   transition: .5s ease;
+  z-index: 0;
   backface-visibility: hidden;
 }
 
@@ -24,7 +34,7 @@
 
 .container:hover .image {
   opacity: 0.3;
-
+	background-color: rgb(255, 255, 255);
 }
 
 .container:hover .middle {
@@ -32,12 +42,19 @@
 }
 
 .text {
-  /*background-color: #4CAF50;*/
-  background-color : #eee;
-
-
-
-  color: white;
+  background-color: #eee;
+  /*opacity: 2;*/
+  color: grey;
   font-size: 16px;
-  padding: 16px 32px;
+  padding:16px 48px 8px 48px;
+  font-family: MyriadPro-Light;
+  /*padding: 16px 0px 5px 20px;*/
 }
+
+/*.container:hover > .image {
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+}*/
+/*.image:hover > .contentShow {
+  visibility: visible;
+}*/
