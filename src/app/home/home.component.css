@@ -51,6 +51,38 @@
   /*padding: 16px 0px 5px 20px;*/
 }
 
+
+
+
+.a-text-center .a-box{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-box{
+  border-radius: 4px;
+  border: 1px #ddd solid;
+  background-color: #fff;
+  display:block;
+  width:240px;
+  height:35px;
+}
+.a-padding-mini{
+  padding : 4px 6px!important;
+}
+
+.a-color-secondary{
+  margin-left:55px;
+  color:#0066c0;
+  font-size:15px ;
+  word-spacing:1px;
+  word-wrap: break-word;;
+}
+
+.a-color-secondary:hover {
+  color:#c45500;
+}
+
 /*.container:hover > .image {
   filter: blur(15px);
   -webkit-filter: blur(15px);

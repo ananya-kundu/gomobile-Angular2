@@ -1,0 +1,81 @@
+/*.mobClass{
+  margin-top:40px;
+  border:solid 1px #f0f0f0;
+  justify-content: center;
+  /*position: relative;*/
+  /*flex:1;
+  align-items: center;
+}*/
+#mobcss{
+  margin-top:40px;
+  border:solid 1px #f0f0f0;
+  justify-content: center;
+  position: relative;
+  flex:1;
+  align-items: center;
+}
+li{
+  style:none;
+}
+
+.addToCart{
+    font-family: MyriadPro-Light;
+      letter-spacing: 0;
+      margin-top:14px;
+      padding: 18px 8px;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+      width: 99%;
+      border: none;
+      float: left;
+      background: #ff9f00;
+      color: #fff;
+}
+
+.buyNow{
+    font-family: MyriadPro-Light;
+      letter-spacing: 0;
+      margin-top:14px;
+      padding: 18px 18px;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+      width:99%;
+      background: #fb641b;
+      float: left;
+      border: none;
+      color: #fff;
+}
+
+.mobName{
+      font-family: MyriadPro-Light;
+  margin-top:60px;
+  font-size:18px;
+  line-height:1.4;
+  color:#212121;
+  display: inline-block;
+  margin-right: 5px;
+  padding:5px 2px 0px 2px;
+  display: inline;
+}
+hr {
+    margin-bottom: -7px;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+}
+.price{
+      font-family: MyriadPro-Light;
+  padding-top:2px;
+  display:flex
+}
+
+#rating{
+  
+}
+
+.buyNow:hover, .addToCart:hover {
+  background-color: grey;
+}

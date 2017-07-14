@@ -36,12 +36,11 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.appService.loginData(this.loginForm.value).subscribe(posts => {
       console.log("posts",posts);
-    this.posts = posts.json();
-    if(this.posts.result.success == true){
-      let product = JSON.stringify(this.posts.data);
-      localStorage.setItem('product',product);
-
-      this.router.navigate(['/home']);
+      this.posts = posts.json();
+      if(this.posts.result.success == true){
+          let product = JSON.stringify(this.posts.data);
+          localStorage.setItem('product',product);
+          this.router.navigate(['/home']);
     }else{
       this.router.navigate(['/login']);
     }

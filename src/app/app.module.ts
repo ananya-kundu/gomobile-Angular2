@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PipesPipe } from './pipes.pipe';
+import { MobiledetailsComponent } from './mobiledetails/mobiledetails.component';
 
 
 const appRoutes : Routes = [
@@ -23,6 +24,8 @@ const appRoutes : Routes = [
     { path : 'signup' , component : SignupComponent },
     { path : 'login' , component : LoginComponent },
     { path : 'home' , component : HomeComponent },
+    { path : 'mobiledetails' , component : MobiledetailsComponent },
+
 
 ];
 
@@ -36,6 +39,7 @@ const appRoutes : Routes = [
     NavigationbarComponent,
     SidebarComponent,
     PipesPipe,
+    MobiledetailsComponent,
 
   ],
   imports: [

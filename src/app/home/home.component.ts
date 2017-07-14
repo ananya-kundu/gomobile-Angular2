@@ -26,6 +26,14 @@ export class HomeComponent implements OnInit {
     this.keyValue = value;
     console.log("change value",value);
   }
+  productDetails(prod:any){
+    console.log("prod",prod);
+    let prodNew = JSON.stringify(prod);
+    localStorage.setItem('productnew',prodNew);
+
+  }
+
+
 //   logout():void{
 //     this.auth.logout();
 //   }
