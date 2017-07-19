@@ -7,7 +7,10 @@
     position: relative;
     width: 50%;
 }
-
+/*
+.img{
+  width:440px;
+}*/
 
 .image {
   padding: 10px;
@@ -33,7 +36,8 @@
 }
 
 .container:hover .image {
-  opacity: 0.3;
+  /*opacity: 0.3;*/
+  filter: blur(12px);
 	background-color: rgb(255, 255, 255);
 }
 
@@ -42,11 +46,12 @@
 }
 
 .text {
+  /*width:120px;*/
   background-color: #eee;
   /*opacity: 2;*/
   color: grey;
-  font-size: 16px;
-  padding:16px 48px 8px 48px;
+  font-size: 14px;
+  padding:16px 40px 8px 30px;
   font-family: MyriadPro-Light;
   /*padding: 16px 0px 5px 20px;*/
 }
@@ -67,6 +72,11 @@
   width:240px;
   height:35px;
 }
+
+.a-box:hover {
+  border:1px solid grey;
+}
+
 .a-padding-mini{
   padding : 4px 6px!important;
 }

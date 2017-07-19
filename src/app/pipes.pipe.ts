@@ -20,11 +20,8 @@ export class PipesPipe implements PipeTransform {
       console.log("filterKey");
       return feature;
 
-    // }
-    // console.log(typeof filterKey);
-    // return filterKey;
+    }
+    console.log(typeof filterKey);
+    return filterKey;
   }
-}
-
-
 }

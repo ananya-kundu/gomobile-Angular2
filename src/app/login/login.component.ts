@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
 
     }
     ngOnInit(){
+      if(localStorage.getItem('product')){
+        this.router.navigate(['/home']);
+      }
       this.loginForm = this._formBuilder.group({
         email : [" ",[Validators.required]],
         password : [" ",[Validators.required]]

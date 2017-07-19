@@ -1,7 +1,15 @@
 .sidebarcss{
   padding : 10px;
   margin : 1px;
-  height : 100%;
-  width :191px;
+  height : 90%;
+  width : 191px;
+  position: fixed;
   box-shadow : 1px 0px 2px 1px grey;
+}
+
+
+@media (max-width:500px){
+  .sidebarcss{
+    width:115px;
+  }
 }

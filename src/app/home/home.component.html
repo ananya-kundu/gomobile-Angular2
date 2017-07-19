@@ -20,25 +20,23 @@
         </div>
         <!-- <div style="margin-left:30px;">{{data.name }}</div> -->
         <div class="middle">
-          <div class="text" style="color:#555;">{{data.name}} {{data.price}} {{data.rating}}</div>
+          <div class="text" style="color:#555;">
+            <div class="row">
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="margin-top:5px;display:inline;">
+                <div style="padding:3px 5px 5px 0px;font-size:14px;font-family: MyriadPro-Light;color:#777;">Price</div>
+                <div style="padding:3px 5px 5px 0px;font-size:14px;font-family: MyriadPro-Light;color:#777;">Rating</div>
+            </div>
+
+              <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="margin-top:5px;color:#777;">
+                <div style="padding:3px 5px 5px 5px;font-size:14px;font-family: MyriadPro-Light;color:#777;">₹{{data.price}}</div>
+                <div style="padding:3px 5px 5px 10px;font-size:14px;font-family: MyriadPro-Light;color:#777;"> {{data.rating}}</div>
+            </div>
+          </div>
+
+          </div>
         </div>
       </div>
     </div>
 
     <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2"> </div>
   </div>
-
-
-
-  <!-- <img src="{{data.image.small}}" style="height:300px;width:200px;margin-top:20px;"><div>{{data.name}}</div>
-</div>
-</div> -->
-  <!-- <table>
-     <tr *ngFor="let spec of prod.specs | keys">
-       <td><b>{{ spec.key }}</b></td>
-       <td *ngIf="spec.key=='camera'">{{spec.value}}{{camera}}</td>
-       <td *ngIf="spec.key=='storage'">{{spec.value}}{{storage}}</td>
-       <td *ngIf="spec.key != 'storage'"><span *ngIf="spec.key != 'camera'">{{ spec.value }}</span></td>
-     </tr>
-   </table>
- -->

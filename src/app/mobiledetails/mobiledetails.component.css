@@ -25,7 +25,7 @@ li{
       padding: 18px 8px;
       border-radius: 2px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-      width: 99%;
+      width: 187px;
       border: none;
       float: left;
       background: #ff9f00;
@@ -39,7 +39,7 @@ li{
       padding: 18px 18px;
       border-radius: 2px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-      width:99%;
+      width:187px;
       background: #fb641b;
       float: left;
       border: none;
@@ -72,10 +72,79 @@ hr {
   display:flex
 }
 
-#rating{
-  
+#ratingid{
+  height:23px;
+      background-color: #388e3c;
+    line-height: normal;
+    display: inline-block;
+    color: #fff;
+    padding: 2px 4px 2px 4px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    vertical-align: middle;
+
 }
 
 .buyNow:hover, .addToCart:hover {
   background-color: grey;
+  border :black;
+}
+
+#manuId1{
+  padding:5px 5px 5px 0px;
+  font-size:18px;
+  font-family:
+   MyriadPro-Light;color:#777;
+}
+
+#other1{
+  padding:3px 5px 5px 0px;
+  font-size:18px;
+  font-family: MyriadPro-Light;
+  color:#777;
+}
+
+#manuId2{
+  padding:5px;
+  font-size:18px;
+  font-family: MyriadPro-Light;
+  color:#777;
+}
+
+#other2{
+  padding:3px 5px 5px 5px;
+  font-size:18px;
+  font-family: MyriadPro-Light;
+  color:#777;
+}
+
+@media(max-width : 550px){
+  .addToCart{
+    width:420px;
+  }
+  .buyNow{
+      width:420px;
+      margin-left:-26px;
+  }
+  /*.mid{
+    width:420px;
+  }*/
+
+}
+@media(max-width : 1200px){
+
+  .mid{
+    width:90%;
+    margin-left:40px;
+  }
+
+}
+@media(max-width : 470px){
+
+  .mid{
+    width:140%;
+    margin-left:40px;
+  }
+
 }

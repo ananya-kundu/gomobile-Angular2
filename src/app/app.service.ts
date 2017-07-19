@@ -8,10 +8,10 @@ resObj;
   feature : Array<any>;
   constructor(private http: Http) {
     this.feature = [
-        { head: 'Manufacturer', name: ['Apple','Samsung','HTC','Nokia','Sony'] },
-        { head: 'Storage', name: ['16 GB','32 GB'] },
-        { head: 'OS', name: ['Android','iOS','Windows'] },
-        { head: 'Camera', name: ['5 Mega pixel','8 Mega pixel','12 Mega pixel','15 Mega pixel'] }
+        { head: 'manufacturer', name: ['Apple','Samsung','HTC','Nokia','Sony'] },
+        { head: 'storage', name: [16,32] },
+        { head: 'os', name: ['Android','iOS','Windows'] },
+        { head: 'camera', name: [5,8,12,15] }
     ];
 }
 

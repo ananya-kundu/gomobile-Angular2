@@ -9,26 +9,58 @@ import { Output,EventEmitter,Input } from '@angular/core';
   providers: [AppService]
 })
 export class SidebarComponent implements OnInit {
-  @Input() result:string="";
-feature:Array<any>;
-@Output() clicked=new EventEmitter<string>();
-constructor(private appService: AppService) {
-  this.feature = this.appService.getFeature();
-  console.log( this.feature);
-}
+        @Input() result:string="";
 
-  ngOnInit() {
-  }
-//   clearAll(){
-//       this.clicked.emit("welcome to EventEmitter");
-// }
+        feature:Array<any>;
+        isChecked;
+
+
+        @Output() clicked=new EventEmitter<string>();
+
+        constructor(private appService: AppService) {
+              this.feature = this.appService.getFeature();
+              console.log( this.feature);
+            }
+
+  ngOnInit() { }
+
+  clearAll(){
+      for(let title in this.feature){
+        for (let subTitle in this.feature[title].content){
+          var subTit = this.feature[title].content;
+          // if ((<HTMLInputElement>document.getElementById(fea)).checked === true) {
+          //       console.log("checked");
+          //       this.isChecked=true;
+          //     }
+          // if ((<HTMLInputElement>document.getElementById(fea)).checked === false) {
+          //           console.log("unchecked");
+          //           this.isChecked=false;
+          //     }
+        }
+
+      }
+}
 changeValue(title,fea){
+
+
+    if ((<HTMLInputElement>document.getElementById(fea)).checked === true) {
+          console.log("checked");
+          this.isChecked=true;
+        }
+    if ((<HTMLInputElement>document.getElementById(fea)).checked === false) {
+              console.log("unchecked");
+              this.isChecked=false;
+        }
+
+
   let objFilter:any = {
       title : title,
-      fea:fea
+      content : fea,
+      checked:this.isChecked
+
   };
     this.clicked.emit(objFilter);
-}
+  }
 }
 
 
