@@ -19,36 +19,45 @@ export class SidebarComponent implements OnInit {
 
         constructor(private appService: AppService) {
               this.feature = this.appService.getFeature();
-              console.log( this.feature);
+              // console.log( this.feature);
             }
 
   ngOnInit() { }
 
   clearAll(){
+    console.log("clearAll");
       for(let title in this.feature){
-        for (let subTitle in this.feature[title].content){
-          var subTit = this.feature[title].content;
-          // if ((<HTMLInputElement>document.getElementById(fea)).checked === true) {
-          //       console.log("checked");
-          //       this.isChecked=true;
-          //     }
-          // if ((<HTMLInputElement>document.getElementById(fea)).checked === false) {
-          //           console.log("unchecked");
-          //           this.isChecked=false;
-          //     }
-        }
+        // console.log("for1",title);
 
+        for (let subTitle in this.feature[title].name){
+          // console.log("for2",subTitle,this.feature[title].name[subTitle]);
+
+          var subTit = this.feature[title].name[subTitle];
+          // console.log("sub",subTit);
+          if ((<HTMLInputElement>document.getElementById(subTit)).checked === true) {
+            // console.log("if subtitle");
+            (<HTMLInputElement>document.getElementById(subTit)).checked = false;
+              }
+
+            // var clear = true;
+            let objFilter:any = {
+              clear : true
+            }
+              this.clicked.emit(objFilter);
       }
 }
+}
+
+
 changeValue(title,fea){
 
 
     if ((<HTMLInputElement>document.getElementById(fea)).checked === true) {
-          console.log("checked");
+          // console.log("checked");
           this.isChecked=true;
         }
     if ((<HTMLInputElement>document.getElementById(fea)).checked === false) {
-              console.log("unchecked");
+              // console.log("unchecked");
               this.isChecked=false;
         }
 
@@ -56,7 +65,8 @@ changeValue(title,fea){
   let objFilter:any = {
       title : title,
       content : fea,
-      checked:this.isChecked
+      checked:this.isChecked,
+      clear : false
 
   };
     this.clicked.emit(objFilter);

@@ -50,15 +50,25 @@ export class HomeComponent implements OnInit {
   }
 
   onClicked(value:any){
+    if(value.clear){
+      this.prodObj = {
+        manufacturer : [],
+        storage : [],
+        os : [],
+        camera : []
+      }
+    }
+    else{
+      if (value.checked) {
+        this.prodObj[value.title].push(value.content);
+      }
+      else {
+        let remove = this.prodObj[value.title].indexOf(value.content);
+        this.prodObj[value.title].splice(remove, 1);
+      }
+    }
 
 
-   if (value.checked) {
-     this.prodObj[value.title].push(value.content);
-   }
-   else {
-     let remove = this.prodObj[value.title].indexOf(value.content);
-     this.prodObj[value.title].splice(remove, 1);
-   }
 
 
   this.nextData = this.data;
