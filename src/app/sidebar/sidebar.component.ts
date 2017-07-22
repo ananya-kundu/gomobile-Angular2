@@ -27,15 +27,10 @@ export class SidebarComponent implements OnInit {
   clearAll(){
     console.log("clearAll");
       for(let title in this.feature){
-        // console.log("for1",title);
-
         for (let subTitle in this.feature[title].name){
-          // console.log("for2",subTitle,this.feature[title].name[subTitle]);
 
           var subTit = this.feature[title].name[subTitle];
-          // console.log("sub",subTit);
           if ((<HTMLInputElement>document.getElementById(subTit)).checked === true) {
-            // console.log("if subtitle");
             (<HTMLInputElement>document.getElementById(subTit)).checked = false;
               }
 

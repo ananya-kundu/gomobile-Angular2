@@ -1,0 +1,15 @@
+#nav {
+  background-color: #232f3e;
+  height:55px;
+}
+
+
+
+.navicon{
+  margin-left:2px;
+}
+
+
+.navicon:hover {
+  color: rgb(240, 136, 4);
+}

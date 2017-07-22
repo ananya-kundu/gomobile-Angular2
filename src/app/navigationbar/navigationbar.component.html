@@ -11,12 +11,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Angular2 framework</a>
+      <a class="navbar-brand" href="#">Angular2 <span style="color:rgb(240, 136, 4)">framework</span></a>
     </div>
 
      <div class="collapse navbar-collapse" id="navbar">
        <ul class="nav navbar-nav navbar-right">
-         <li><a (click)="logout()" class="button btn" style="margin-right:30px">Logout</a></li>
+         <li><a  [routerLink]="['/cart']"  class="button btn glyphicon glyphicon-shopping-cart navicon" ><span class="navicon">Cart</span></a></li>
+
+         <li><a (click)="logout()" class="button btn glyphicon glyphicon-log-out" style="margin-right:30px"><span class="navicon" >Logout</span></a></li>
        </ul>
 
      </div>

@@ -1,0 +1,42 @@
+.h1,.h2{
+  margin-left: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: MyriadPro-bold;
+
+  /*font-style: bold*/
+}
+.headPrice{
+  font-family: MyriadPro-Light;
+      color: #B12704!important;
+      font-weight: bold;
+      margin-left:150px;
+      margin-bottom: -11px
+}
+
+.headline{
+      text-align: center;
+      float:right;
+      font-size:18px;
+}
+.mobName{
+      color: #0066c0;
+      font-weight: bold;
+      font-family: MyriadPro-Light;
+
+}
+.price{
+  font-family: MyriadPro-Light;
+      color: #B12704!important;
+      font-weight: bold;
+      font-size:18px;
+
+}
+
+
+.remove{
+  font-family: MyriadPro-Light;
+      color:#008a00!important;
+      /*font-weight: bold;*/
+      font-size:14px;
+}

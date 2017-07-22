@@ -8,6 +8,11 @@
 }
 
 
+.clearAllid:hover {
+  border:1px solid rgb(240, 136, 4);
+  color: rgb(240, 136, 4);
+}
+
 @media (max-width:500px){
   .sidebarcss{
     width:115px;

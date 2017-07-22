@@ -14,7 +14,9 @@
         <!-- <span style="float:right">Buy</span> -->
         <div class="a-box">
           <div class="a-box-inner a-padding-mini" >
-            <a  (click)="productDetails(data)" [routerLink]="['/mobiledetails']"><span class="a-color-secondary"  >{{data.name }}</span></a>
+            <a  (click)="productDetails(data)" [routerLink]="['/mobiledetails']">
+              <span class="a-color-secondary" style="color:#232f3e"  >{{data.name }}</span>
+            </a>
             <!-- <span style="float:right">Buy</span> -->
           </div>
         </div>
@@ -40,3 +42,8 @@
 
     <div class="sidebar col-sm-2 col-xs-2 col-lg-2 col-md-2"> </div>
   </div>
+
+
+<!--
+  <div class="mobName"  *ngFor="let p of cartArray"><h2>{{p.name}}</h2><hr></div>
+  <div>Sum</div> -->

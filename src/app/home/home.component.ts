@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       // this.router.navigate(['/login']);
     }
     else{
-            this.router.navigate(['/login']);
+        this.router.navigate(['/login']);
     }
     this.data = JSON.parse(localStorage.getItem('product'));
     console.log(this.data);
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
 
     var self = this;
     this.keyValue = this.nextData.filter(function(mobileObj){
-      let manufacturerFlag = true,storageFlag=true,cameraFlag=true,osFlag=true;
+      let manufacturerFlag = true,storageFlag = true,cameraFlag = true,osFlag = true;
       if(self.prodObj.manufacturer.length>0)
         manufacturerFlag = (self.prodObj.manufacturer.indexOf(mobileObj.specs.manufacturer)>-1)
       if(self.prodObj.storage.length>0)
