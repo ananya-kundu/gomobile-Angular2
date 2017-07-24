@@ -20,10 +20,25 @@ export class CartComponent implements OnInit {
 
     this.cartArray = JSON.parse(localStorage.getItem('addToCartStorage'));
     console.log(this.cartArray);
-    // 
-    // for(let m in this.cartArray){
-    //   this.sum = this.sum + this.cartArray[m].price;
-    // }
+
+    for(let m in this.cartArray){
+      this.sum = this.sum + this.cartArray[m].price;
+      console.log(this.sum);
+    }
+
+  }
+
+  remove(p){
+    var cartid = this.cartArray.indexOf(p);
+    this.cartArray.splice(cartid,1);
+    console.log(cartid);
+    // this.cartArray = JSON.parse(localStorage.getItem('addToCartStorage'));
+     let updatedPrice = JSON.stringify(this.cartArray);
+     localStorage.setItem('addToCartStorage',updatedPrice);
+     this.sum = this.sum - p.price;
+    //  window.location.reload();
+
+
 
   }
   }

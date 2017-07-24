@@ -16,6 +16,8 @@
 
      <div class="collapse navbar-collapse" id="navbar">
        <ul class="nav navbar-nav navbar-right">
+         <li><a  [routerLink]="['/home']"  class="button btn glyphicon glyphicon-home navicon" ><span class="navicon">Home</span></a></li>
+
          <li><a  [routerLink]="['/cart']"  class="button btn glyphicon glyphicon-shopping-cart navicon" ><span class="navicon">Cart</span></a></li>
 
          <li><a (click)="logout()" class="button btn glyphicon glyphicon-log-out" style="margin-right:30px"><span class="navicon" >Logout</span></a></li>

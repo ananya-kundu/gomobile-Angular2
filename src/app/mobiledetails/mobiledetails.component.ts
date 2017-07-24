@@ -34,6 +34,7 @@ addToCart(mobiledata){
         console.log("log if");
         return ;
       }
+      alert('Product added');
       }
 
       this.addCartArray.push(mobiledata);
