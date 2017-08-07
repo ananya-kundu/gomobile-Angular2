@@ -36,7 +36,7 @@ export class CartComponent implements OnInit {
      let updatedPrice = JSON.stringify(this.cartArray);
      localStorage.setItem('addToCartStorage',updatedPrice);
      this.sum = this.sum - p.price;
-    //  window.location.reload();
+     window.location.reload();
 
 
 
