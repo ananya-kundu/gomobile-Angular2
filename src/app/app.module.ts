@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppService } from './app.service';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 import 'hammerjs';
 // import { MaterialModule } from "@angular/material";
@@ -18,6 +19,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PipesPipe } from './pipes.pipe';
 import { MobiledetailsComponent } from './mobiledetails/mobiledetails.component';
 import { CartComponent } from './cart/cart.component';
+
 
 
 const appRoutes : Routes = [
@@ -50,7 +52,7 @@ const appRoutes : Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes, {useHash: true}),
-
+    ToastModule.forRoot(),
 
   ],
   providers: [AppService],

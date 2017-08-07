@@ -16,5 +16,6 @@
 @media (max-width:500px){
   .sidebarcss{
     width:115px;
+    /*height:88%;*/
   }
 }

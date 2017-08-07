@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { ToastsManager,ToastOptions } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'app-mobiledetails',
   templateUrl: './mobiledetails.component.html',
-  styleUrls: ['./mobiledetails.component.css']
+  styleUrls: ['./mobiledetails.component.css'],
+  // providers: []
 })
 export class MobiledetailsComponent implements OnInit {
   mobiledata:any;
@@ -12,7 +14,10 @@ export class MobiledetailsComponent implements OnInit {
   public localCartItem ;
   public addCart;
 
-  constructor() { }
+  constructor(public toastr: ToastsManager, vcr: ViewContainerRef,public toastColor: ToastOptions) {
+    //  this.toastr.setRootViewContainerRef(vcr);
+    // this.toastColor .animate='fade';
+ }
 
 
   ngOnInit() {
@@ -31,10 +36,12 @@ addToCart(mobiledata){
       console.log("log for");
 
       if(this.addCartArray[x].id == mobiledata.id){
-        console.log("log if");
+        // console.log("log if");
         return ;
       }
       alert('Product added');
+      //  this.toasterService.info('any');
+      // this.toastr.info('Hi..');
       }
 
       this.addCartArray.push(mobiledata);

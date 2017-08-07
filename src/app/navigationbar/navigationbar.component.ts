@@ -8,17 +8,21 @@ import { RouterModule, Routes ,Router} from '@angular/router';
   styleUrls: ['./navigationbar.component.css']
 })
 export class NavigationbarComponent implements OnInit {
-
+  cartCount;
+  count;
   constructor(public appservice:AppService,private router:Router) { }
 
   ngOnInit() {
+    this.cartCount = JSON.parse(localStorage.getItem('addToCartStorage'));
+    console.log(this.cartCount);
+    this.count = this.cartCount.length;
 
   }
 
 
 logout(){
     let data={data:"data"};
-    localStorage.removeItem('product');         
+    localStorage.removeItem('product');
     this.router.navigate(['/login']);
 }
 

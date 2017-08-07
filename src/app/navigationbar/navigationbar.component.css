@@ -2,7 +2,9 @@
   background-color: #232f3e;
   height:55px;
 }
-
+.navbar-nav {
+    margin: 0.5px -15px;
+}
 
 
 .navicon{
