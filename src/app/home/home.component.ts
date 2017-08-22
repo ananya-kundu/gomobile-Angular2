@@ -23,11 +23,9 @@ export class HomeComponent implements OnInit {
   }
 
   public prodArray = new Array();
-   nextData : any;
+  nextData : any;
 
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     if(localStorage.getItem('product')){

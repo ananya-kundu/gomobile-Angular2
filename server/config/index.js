@@ -66,7 +66,3 @@ var defaultResult = {
 };
 
 module.exports = errors;
-
-/////////////////////////
-//  req.checkBody("firstName", "Enter a valid firstName").optional().matches(/^[A-Za-z]+$/);
-// req.checkBody("password", "Enter a valid create password").optional().matches(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z]*[A-Z])(?=.*[@#$%&_]).*$/);
